@@ -1,0 +1,456 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0053)http://online-october2015.furiten.ru/last/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг</a></li>
+                    <li><a href="../graphs/default.htm">Графики</a></li>
+                    <li><a href="../addonline/default.htm">+Онлайн-игра&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Последние игры</h2>
+<br>
+
+    <table class='table table-striped table-condensed'>
+    <tr>
+        <th>#</th>
+        <th>Время регистрации</th>
+        <th>Игроки</th>
+        <th>Всякое разное</th>
+    </tr><tr>
+        <td>1</td>
+        <td>2015-10-10 16:31:58</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>TinkBell</b></td>
+            <td style='background: transparent; width: 25%;'>39900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+299</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Drow</b></td>
+            <td style='background: transparent; width: 25%;'>27300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+73</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Mult</b></td>
+            <td style='background: transparent; width: 25%;'>20000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-100</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RuRoLe</b></td>
+            <td style='background: transparent; width: 25%;'>12800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-272</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-d4fbf712tw2' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>TinkBell</b> - 7 хан</li>
+                <li>В игре было 11 побед по рон и 7 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>RuRoLe</b> - Риичи, Пин-фу (<b>Drow</b>), 2 хан, 30 фу (дилерское)</div><div>東1: <b>RuRoLe</b> - Тан-яо (<b>TinkBell</b>), 1 хан, 30 фу (дилерское)</div><div>東1: <b>TinkBell</b> - Риичи, Пин-фу (<b>RuRoLe</b>), 2 хан, 30 фу</div><div>東2: <b>RuRoLe</b> - Тан-яо, дора 1 (цумо), 2 хан, 30 фу</div><div>東3: <b>TinkBell</b> - Тойтой, дора 5 (<b>Drow</b>), 7 хан</div><div>東4: <b>Drow</b> - Тойтой, Якухай 1 (<b>Mult</b>), 3 хан, 50 фу (дилерское)</div><div>東4: <b>Drow</b> - Риичи, Мендзен цумо, Тан-яо, дора 2 (цумо), 5 хан (дилерское)</div><div>東4: <b>TinkBell</b> - Тан-яо (<b>RuRoLe</b>), 1 хан, 30 фу</div><div>南1: <b>TinkBell</b> - Риичи, Мендзен цумо, дора 1 (цумо), 3 хан, 30 фу</div><div>南2: <b>Drow</b> - Риичи, дора 2 (<b>Mult</b>), 3 хан, 40 фу</div><div>南3: <b>Mult</b> - Иппацу, Риичи, Мендзен цумо (цумо), 3 хан, 30 фу (дилерское)</div><div>南3: <b>Mult</b> - Якухай 1, дора 1 (<b>TinkBell</b>), 2 хан, 40 фу (дилерское)</div><div>南3: <b>Mult</b> - Мендзен цумо, Риичи (цумо), 2 хан, 60 фу (дилерское)</div><div>南3: <b>Mult</b> - Хоницу (цумо), 2 хан, 30 фу (дилерское)</div><div>南3: <b>Mult</b> - Якухай 1 (<b>TinkBell</b>), 1 хан, 30 фу (дилерское)</div><div>南3: <b>TinkBell</b> - Тойтой (<b>Drow</b>), 2 хан, 50 фу</div><div>南4: <b>Drow</b> - Якухай 1, дора 1 (<b>Mult</b>), 2 хан, 40 фу (дилерское)</div><div>南4: <b>TinkBell</b> - Мендзен цумо, Тан-яо, Пин-фу, Риичи, дора 1 (цумо), 5 хан</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>2</td>
+        <td>2015-10-10 16:31:22</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Benawi</b></td>
+            <td style='background: transparent; width: 25%;'>34900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+249</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>recursor</b></td>
+            <td style='background: transparent; width: 25%;'>29700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+97</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Suslik</b></td>
+            <td style='background: transparent; width: 25%;'>28500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-15</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Rumkin</b></td>
+            <td style='background: transparent; width: 25%;'>6900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-331</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-b0358a36tw1' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Benawi</b> - 5 хан</li>
+                <li>В игре было 7 побед по рон и 5 побед по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Rumkin</b> - Якухай 1, Чанта, дора 1 (<b>Suslik</b>), 3 хан, 30 фу</div><div>東2: <b>Rumkin</b> - Риичи, дора 2 (<b>recursor</b>), 3 хан, 40 фу</div><div>東3: <b>Benawi</b> - Пин-фу, Тан-яо, Риичи, Иппацу, дора 1 (<b>recursor</b>), 5 хан</div><div>東4: <b>recursor</b> - Риичи (<b>Rumkin</b>), 1 хан, 40 фу</div><div>南1: <b>Benawi</b> - Иппацу, Тан-яо, Мендзен цумо, Риичи, дора 1 (цумо), 5 хан (дилерское)</div><div>南1: <b>Suslik</b> - Якухай 1, дора 3 (цумо), 4 хан, 40 фу</div><div>南2: Ничья (темпай: Benawi, recursor, Suslik, Rumkin)</div><div>南2: <b>recursor</b> - Пин-фу, Риичи, дора 2 (<b>Rumkin</b>), 4 хан, 30 фу (дилерское)</div><div>南2: <b>recursor</b> - Якухай 1, Хоницу, дора 1 (<b>Suslik</b>), 4 хан, 40 фу (дилерское)</div><div>南2: <b>Suslik</b> - Тан-яо, Мендзен цумо, Риичи (цумо), 3 хан, 30 фу</div><div>南3: Ничья (темпай: recursor, Suslik)</div><div>南3: <b>Suslik</b> - Тан-яо, дора 2 (цумо), 3 хан, 30 фу (дилерское)</div><div>南3: <b>recursor</b> - Пин-фу (<b>Benawi</b>), 1 хан, 30 фу</div><div>南4: <b>Suslik</b> - Якухай 1, дора 1 (цумо), 2 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>3</td>
+        <td>2015-10-10 16:18:40</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>JаyTord</b></td>
+            <td style='background: transparent; width: 25%;'>63300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+533</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Полуось</b></td>
+            <td style='background: transparent; width: 25%;'>35600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+156</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Fly</b></td>
+            <td style='background: transparent; width: 25%;'>1100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-289</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tyanka</b></td>
+            <td style='background: transparent; width: 25%;'>0</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-400</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-80bb3e4etw2' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Fly</b> - 5 хан</li>
+                <li>В игре было 8 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>JаyTord</b> - Якухай 2 (<b>Fly</b>), 2 хан, 30 фу (дилерское)</div><div>東1: <b>JаyTord</b> - Риичи, дора 2 (<b>Полуось</b>), 3 хан, 40 фу (дилерское)</div><div>東1: <b>Полуось</b> - Риичи, дора 1 (<b>Tyanka</b>), 2 хан, 40 фу</div><div>東2: <b>JаyTord</b> - Тан-яо, Риичи, дора 1 (<b>Tyanka</b>), 3 хан, 40 фу</div><div>東3: <b>JаyTord</b> - Риичи, Мендзен цумо, Якухай 1, дора 1 (цумо), 4 хан, 40 фу</div><div>東4: Ничья (темпай: JаyTord, Полуось)</div><div>東4: <b>Fly</b> - Тойтой, Якухай 1, дора 2 (<b>Tyanka</b>), 5 хан</div><div>南1: <b>Полуось</b> - Якухай 1, Хоницу (цумо), 3 хан, 40 фу</div><div>南2: <b>JаyTord</b> - Тан-яо, Сананко, дора 1 (<b>Fly</b>), 4 хан, 50 фу</div><div>南3: <b>JаyTord</b> - Тан-яо (цумо), 1 хан, 30 фу</div><div>南4: <b>Полуось</b> - Риичи, дора 4 (<b>Fly</b>), 5 хан (дилерское)</div><div>南4: <b>JаyTord</b> - Якухай 1, дора 2 (<b>Fly</b>), 3 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>4</td>
+        <td>2015-10-10 16:15:03</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Replay</b></td>
+            <td style='background: transparent; width: 25%;'>40500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+305</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>-ラバック-</b></td>
+            <td style='background: transparent; width: 25%;'>30200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+102</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>B3nya</b></td>
+            <td style='background: transparent; width: 25%;'>23700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-63</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sayaka-s</b></td>
+            <td style='background: transparent; width: 25%;'>5600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-344</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-b577ed71tw0' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>B3nya</b> - 8 хан</li>
+                <li>В игре было 6 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>-ラバック-</b> - Мендзен цумо, Риичи (цумо), 2 хан, 30 фу (дилерское)</div><div>東1: <b>-ラバック-</b> - Якухай 1, Риичи, Иппацу, дора 2 (<b>B3nya</b>), 5 хан (дилерское)</div><div>東1: <b>Replay</b> - Пин-фу, Риичи, Иппацу, дора 1 (<b>Sayaka-s</b>), 4 хан, 30 фу</div><div>東2: <b>-ラバック-</b> - Тойтой (цумо), 2 хан, 40 фу</div><div>東3: <b>Replay</b> - Хоницу, Якухай 1, дора 1 (<b>-ラバック-</b>), 4 хан, 30 фу</div><div>東4: <b>Replay</b> - Пин-фу (<b>-ラバック-</b>), 1 хан, 30 фу</div><div>南1: <b>Sayaka-s</b> - Риичи, Тан-яо (<b>B3nya</b>), 2 хан, 40 фу</div><div>南2: Ничья (темпай: -ラバック-, Sayaka-s, B3nya)</div><div>南3: <b>B3nya</b> - Пин-фу, Саншоку, Мендзен цумо, Иппацу, Риичи, дора 2 (цумо), 8 хан</div><div>南4: <b>Replay</b> - Тан-яо, дора 2 (<b>Sayaka-s</b>), 3 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>5</td>
+        <td>2015-10-10 16:09:05</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RQD</b></td>
+            <td style='background: transparent; width: 25%;'>47800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+378</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>\(*.*)/</b></td>
+            <td style='background: transparent; width: 25%;'>31200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+112</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Ｍａｔｔｅ</b></td>
+            <td style='background: transparent; width: 25%;'>15800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-142</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Nyaka</b></td>
+            <td style='background: transparent; width: 25%;'>5200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-348</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-96b38f6e' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Ｍａｔｔｅ</b> - 4 хан, 40 фу</li>
+                <li>В игре было 5 побед по рон и 5 побед по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>\(*.*)/</b> - Тан-яо, Риичи, Мендзен цумо (цумо), 3 хан, 30 фу</div><div>東2: <b>Nyaka</b> - Якухай 1 (<b>Ｍａｔｔｅ</b>), 1 хан, 30 фу</div><div>東3: <b>RQD</b> - Саншоку, Риичи (<b>Ｍａｔｔｅ</b>), 3 хан, 40 фу</div><div>東4: <b>Ｍａｔｔｅ</b> - Риичи, Саншоку, дора 1 (<b>Nyaka</b>), 4 хан, 40 фу</div><div>南1: <b>Nyaka</b> - Риичи, Иппацу, Мендзен цумо (цумо), 3 хан, 30 фу</div><div>南2: <b>RQD</b> - Риичи, дора 1 (<b>Nyaka</b>), 2 хан, 40 фу (дилерское)</div><div>南2: Ничья (темпай: RQD, Nyaka)</div><div>南2: <b>RQD</b> - Мендзен цумо, Риичи, дора 1 (цумо), 3 хан, 30 фу (дилерское)</div><div>南2: <b>\(*.*)/</b> - Якухай 1, дора 3 (цумо), 4 хан, 40 фу</div><div>南3: <b>RQD</b> - Мендзен цумо, Риичи, Иппацу, дора 1 (цумо), 4 хан, 30 фу</div><div>南4: <b>RQD</b> - Якухай 1 (<b>Nyaka</b>), 1 хан, 60 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>6</td>
+        <td>2015-10-10 15:29:59</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Полуось</b></td>
+            <td style='background: transparent; width: 25%;'>33500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+235</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Suslik</b></td>
+            <td style='background: transparent; width: 25%;'>29700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+97</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RQD</b></td>
+            <td style='background: transparent; width: 25%;'>22000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-80</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sayaka-s</b></td>
+            <td style='background: transparent; width: 25%;'>14800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-252</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101021gm-010b-16737-888244edtw1' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Полуось</b> - 4 хан, 40 фу</li>
+                <li>В игре было 6 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>RQD</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>東2: <b>Sayaka-s</b> - Якухай 1 (<b>RQD</b>), 1 хан, 40 фу</div><div>東3: Ничья (темпай: Sayaka-s, Полуось, RQD)</div><div>東3: <b>Suslik</b> - Тан-яо (цумо), 1 хан, 40 фу</div><div>東4: <b>Sayaka-s</b> - Риичи, Пин-фу (<b>RQD</b>), 2 хан, 30 фу</div><div>南1: <b>Suslik</b> - Риичи, Мендзен цумо, дора 1 (цумо), 3 хан, 30 фу</div><div>南2: <b>Suslik</b> - Якухай 1, Тойтой (<b>Sayaka-s</b>), 3 хан, 50 фу</div><div>南3: <b>Sayaka-s</b> - Якухай 1, Тойтой (<b>Suslik</b>), 3 хан, 40 фу</div><div>南4: <b>Полуось</b> - Риичи (<b>Sayaka-s</b>), 1 хан, 40 фу</div><div>西1: <b>Полуось</b> - Риичи, дора 3 (<b>Sayaka-s</b>), 4 хан, 40 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>7</td>
+        <td>2015-10-10 15:29:52</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>JаyTord</b></td>
+            <td style='background: transparent; width: 25%;'>33500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+235</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>-ラバック-</b></td>
+            <td style='background: transparent; width: 25%;'>31800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+118</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Mult</b></td>
+            <td style='background: transparent; width: 25%;'>19700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-103</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>TinkBell</b></td>
+            <td style='background: transparent; width: 25%;'>15000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-250</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101021gm-010b-16737-aacf2703tw1' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>-ラバック-</b> - 4 хан, 40 фу</li>
+                <li>В игре было 6 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Mult</b> - Якухай 1 (<b>-ラバック-</b>), 1 хан, 30 фу</div><div>東2: Ничья (темпай: -ラバック-)</div><div>東3: <b>JаyTord</b> - Якухай 1, Риичи (<b>Mult</b>), 2 хан, 40 фу</div><div>東4: <b>JаyTord</b> - Риичи, дора 2 (<b>Mult</b>), 3 хан, 40 фу</div><div>南1: <b>-ラバック-</b> - Риичи, Якухай 1, дора 2 (<b>TinkBell</b>), 4 хан, 40 фу</div><div>南2: <b>Mult</b> - Риичи, Мендзен цумо, Тан-яо (цумо), 3 хан, 30 фу (дилерское)</div><div>南2: <b>TinkBell</b> - Хоницу, Якухай 1 (<b>JаyTord</b>), 3 хан, 30 фу</div><div>南3: <b>-ラバック-</b> - Якухай 1 (<b>Mult</b>), 1 хан, 30 фу (дилерское)</div><div>南3: Ничья (темпай: JаyTord)</div><div>南4: <b>JаyTord</b> - Риичи, Мендзен цумо (цумо), 2 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>8</td>
+        <td>2015-10-10 15:27:28</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>recursor</b></td>
+            <td style='background: transparent; width: 25%;'>30600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+206</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>\(*.*)/</b></td>
+            <td style='background: transparent; width: 25%;'>30000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+100</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Nyaka</b></td>
+            <td style='background: transparent; width: 25%;'>25400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-46</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Replay</b></td>
+            <td style='background: transparent; width: 25%;'>14000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-260</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101021gm-010b-16737-80d42fd5tw0' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>\(*.*)/</b> - 4 хан, 20 фу</li>
+                <li>В игре было 4 победы по рон и 4 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Nyaka</b> - Тан-яо, Риичи (<b>\(*.*)/</b>), 2 хан, 40 фу</div><div>東2: Ничья (темпай: \(*.*)/, Replay)</div><div>東2: <b>Nyaka</b> - Риичи, дора 1 (<b>\(*.*)/</b>), 2 хан, 40 фу</div><div>東3: <b>recursor</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>東4: <b>\(*.*)/</b> - Тойтой (цумо), 2 хан, 50 фу</div><div>南1: <b>recursor</b> - Тан-яо (<b>Replay</b>), 1 хан, 40 фу</div><div>南2: <b>recursor</b> - Иппацу, Мендзен цумо, Риичи (цумо), 3 хан, 60 фу</div><div>南3: <b>\(*.*)/</b> - Риичи, Пин-фу, дора 1 (<b>Replay</b>), 3 хан, 30 фу</div><div>南4: <b>\(*.*)/</b> - Иппацу, Мендзен цумо, Риичи, Пин-фу (цумо), 4 хан, 20 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>9</td>
+        <td>2015-10-10 15:26:27</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Rumkin</b></td>
+            <td style='background: transparent; width: 25%;'>62500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+525</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Drow</b></td>
+            <td style='background: transparent; width: 25%;'>21000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+10</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tyanka</b></td>
+            <td style='background: transparent; width: 25%;'>13000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-170</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Ｍａｔｔｅ</b></td>
+            <td style='background: transparent; width: 25%;'>3500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-365</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101021gm-010b-16737-0d9424a8tw2' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Rumkin</b> - 8 хан</li>
+                <li>В игре было 7 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Ｍａｔｔｅ</b> - Риичи, Пин-фу (<b>Drow</b>), 2 хан, 30 фу</div><div>東2: <b>Rumkin</b> - Тойтой, Тан-яо, дора 3 (цумо), 6 хан</div><div>東3: <b>Drow</b> - Якухай 2, Чанта (<b>Tyanka</b>), 3 хан, 30 фу</div><div>東4: <b>Drow</b> - Якухай 2 (<b>Tyanka</b>), 2 хан, 30 фу</div><div>南1: <b>Drow</b> - Якухай 1 (цумо), 1 хан, 30 фу (дилерское)</div><div>南1: <b>Rumkin</b> - Якухай 1 (<b>Tyanka</b>), 1 хан, 40 фу</div><div>南2: <b>Rumkin</b> - Якухай 1, Чанта, дора 1 (<b>Drow</b>), 3 хан, 30 фу</div><div>南3: <b>Rumkin</b> - Иццу, Риичи, дора 5 (<b>Ｍａｔｔｅ</b>), 8 хан</div><div>南4: <b>Rumkin</b> - Якухай 1 (<b>Drow</b>), 1 хан, 30 фу (дилерское)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>10</td>
+        <td>2015-10-10 15:20:32</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Benawi</b></td>
+            <td style='background: transparent; width: 25%;'>45100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+351</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RuRoLe</b></td>
+            <td style='background: transparent; width: 25%;'>29800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+98</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>B3nya</b></td>
+            <td style='background: transparent; width: 25%;'>26600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-34</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Fly</b></td>
+            <td style='background: transparent; width: 25%;'>-1500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-415</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='../../tenhou.net/0/log2015101022gm-010b-16737-6dba00f9tw2' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b>Benawi</b> - 5 хан</li>
+                <li>В игре было 5 побед по рон и 1 победа по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: Ничья (темпай: RuRoLe, Fly, B3nya)</div><div>東1: <b>Benawi</b> - Иппацу, Мендзен цумо, Пин-фу, Риичи (цумо), 4 хан, 20 фу</div><div>東2: <b>B3nya</b> - Пин-фу, дора 1 (<b>Fly</b>), 2 хан, 30 фу</div><div>東3: <b>Benawi</b> - Пин-фу, Риичи, дора 3 (<b>Fly</b>), 5 хан (дилерское)</div><div>東3: <b>RuRoLe</b> - Риичи, Иппацу, дора 1 (<b>Fly</b>), 3 хан, 40 фу</div><div>東4: <b>RuRoLe</b> - Риичи (<b>Fly</b>), 1 хан, 60 фу</div><div>南1: <b>Benawi</b> - Тойтой (<b>Fly</b>), 2 хан, 40 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr><td colspan=4><div class='pagination'><ul>
+<li><a href='page1.htm'>Назад</a></li>
+<li><a href='page2.htm'>Вперед</a></li>
+</ul></div></td></tr></table></div>
+
+</body>
+</html>

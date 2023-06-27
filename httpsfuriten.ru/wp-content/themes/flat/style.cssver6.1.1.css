@@ -1,0 +1,81 @@
+/*
+Theme Name: Flat
+Theme URI: https://themeisle.com/themes/flat/
+Author: ThemeIsle
+Author URI: https://themeisle.com
+Description: Flat is a free Blog Theme designed by YoArts. Works nice for a personal blog, magazine ,news or review website.
+Version: 1.7.5
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: flat
+Tags: black, orange, white, white, dark, light, two-columns, responsive-layout, left-sidebar, custom-background, custom-colors, custom-menu, editor-style, post-formats, custom-colors, translation-ready,featured-images, threaded-comments, translation-ready,photoblogging
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.sticky {}
+.bypostauthor {}
+
+.widget_calendar table>thead>tr>th, 
+.widget_calendar table>tbody>tr>th,
+.widget_calendar table>tfoot>tr>th,
+.widget_calendar table>thead>tr>td,
+.widget_calendar table>tbody>tr>td,
+.widget_calendar table>tfoot>tr>td {
+	border: 0;
+}
+.widget_calendar table th {
+        background: none;
+}
+.widget_calendar table {
+	border: 0;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'), url('fonts/ptn57f.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url('fonts/ptn77f.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+.hentry .entry-meta,
+#site-navigation a,
+#secondary .widget-title,
+.single .post-title,
+#comments .comment .fn
+ {
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+}
+
+.widget_calendar .widget-title {
+    display: none;
+}
+
+#secondary .widget {
+	font-size: 16px;
+}
+
+#site-navigation a {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+body {
+	font-size: 20px;
+}
+
+.site-header .hgroup img {
+	max-width: 300px;
+}
+
+.site-header .hgroup {
+	text-align: center;
+}

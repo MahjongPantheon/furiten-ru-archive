@@ -1,0 +1,445 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0046)http://turnir2016check.furiten.ru/last/?page=3 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг</a></li>
+                    <li><a href="../graphs/default.htm">Графики</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Последние игры</h2>
+<br>
+
+    <table class='table table-striped table-condensed'>
+    <tr>
+        <th>#</th>
+        <th>Время регистрации</th>
+        <th>Игроки</th>
+        <th>Всякое разное</th>
+    </tr><tr>
+        <td>21</td>
+        <td>2016-01-16 16:03:25</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тян</b></td>
+            <td style='background: transparent; width: 25%;'>48400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+334</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>WE8</b></td>
+            <td style='background: transparent; width: 25%;'>39200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+142</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Richi</b></td>
+            <td style='background: transparent; width: 25%;'>34000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-10</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Александр С</b></td>
+            <td style='background: transparent; width: 25%;'>-1600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-466</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>WE8</b> - 6 хан</li>
+                <li>В игре было 5 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Александр С</b> - Чиитойцу, Риичи (<b>WE8</b>), 3 хан, 25 фу</div><div>東2: <b>Тян</b> - Мендзен цумо, Риичи, дора 3 (цумо), 5 хан</div><div>東3: <b>WE8</b> - Иипейко (<b>Richi</b>), 1 хан, 40 фу</div><div>東4: <b>Тян</b> - Иипейко, дора 1 (<b>Александр С</b>), 2 хан, 40 фу (дилерское)</div><div>東4: <b>Тян</b> - Риичи, дора 2 (<b>Александр С</b>), 3 хан, 40 фу (дилерское)</div><div>東4: <b>Richi</b> - Тойтой, Якухай 2 (цумо), 4 хан, 40 фу</div><div>南1: <b>Тян</b> - Пин-фу, Мендзен цумо, дора 1 (цумо), 3 хан, 20 фу</div><div>南2: <b>WE8</b> - Якухай 2, Хоницу, Тойтой (<b>Александр С</b>), 6 хан (дилерское)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>22</td>
+        <td>2016-01-16 16:02:59</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Faithful to the Oath</b></td>
+            <td style='background: transparent; width: 25%;'>34400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+194</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Replay</b></td>
+            <td style='background: transparent; width: 25%;'>32400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+74</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RQD</b></td>
+            <td style='background: transparent; width: 25%;'>30400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-46</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Yami</b></td>
+            <td style='background: transparent; width: 25%;'>22800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-222</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Faithful to the Oath</b> - 3 хан, 30 фу</li>
+                <li>В игре было 5 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: Ничья (темпай: RQD, Faithful to the Oath)</div><div>東2: <b>Replay</b> - Чиитойцу, Риичи (<b>Yami</b>), 3 хан, 25 фу</div><div>東3: <b>Yami</b> - Тан-яо (цумо), 1 хан, 30 фу</div><div>東4: <b>Yami</b> - Якухай 1 (<b>Replay</b>), 1 хан, 40 фу (дилерское)</div><div>東4: <b>RQD</b> - Тан-яо (цумо), 1 хан, 30 фу</div><div>南1: <b>Faithful to the Oath</b> - Тан-яо, дора 2 (<b>Yami</b>), 3 хан, 30 фу</div><div>南2: <b>RQD</b> - Тан-яо (<b>Replay</b>), 1 хан, 40 фу (дилерское)</div><div>南2: Ничья (темпай: Faithful to the Oath, Yami)</div><div>南3: <b>Replay</b> - Якухай 1 (<b>Faithful to the Oath</b>), 1 хан, 40 фу</div><div>南4: <b>Replay</b> - Пин-фу, Риичи, Мендзен цумо (цумо), 3 хан, 20 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>23</td>
+        <td>2016-01-16 15:54:18</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Silen-san</b></td>
+            <td style='background: transparent; width: 25%;'>35100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+201</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>FaZiG</b></td>
+            <td style='background: transparent; width: 25%;'>33100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+81</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>nwalker</b></td>
+            <td style='background: transparent; width: 25%;'>30400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-46</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сладкий</b></td>
+            <td style='background: transparent; width: 25%;'>21400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-236</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Silen-san</b> - 3 хан, 30 фу</li>
+                <li>В игре было 7 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Silen-san</b> - Тан-яо, дора 1 (<b>nwalker</b>), 2 хан, 30 фу</div><div>東2: <b>nwalker</b> - Иццу (<b>Silen-san</b>), 1 хан, 30 фу</div><div>東3: <b>Silen-san</b> - Хоницу (<b>nwalker</b>), 2 хан, 40 фу</div><div>東4: <b>nwalker</b> - Якухай 2 (<b>Silen-san</b>), 2 хан, 30 фу</div><div>南1: <b>FaZiG</b> - Якухай 1 (<b>Silen-san</b>), 1 хан, 30 фу (дилерское)</div><div>南1: <b>nwalker</b> - Пин-фу, Риичи (<b>Сладкий</b>), 2 хан, 30 фу</div><div>南2: <b>FaZiG</b> - Тан-яо (цумо), 1 хан, 30 фу</div><div>南3: <b>Сладкий</b> - Якухай 1, дора 1 (цумо), 2 хан, 30 фу</div><div>南4: <b>Silen-san</b> - Якухай 1, Хоницу (<b>Сладкий</b>), 3 хан, 30 фу (дилерское)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>24</td>
+        <td>2016-01-16 15:50:46</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Angrymodern</b></td>
+            <td style='background: transparent; width: 25%;'>34100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+191</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Kvega</b></td>
+            <td style='background: transparent; width: 25%;'>31400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+64</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RH</b></td>
+            <td style='background: transparent; width: 25%;'>31300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-37</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Кузьма</b></td>
+            <td style='background: transparent; width: 25%;'>23200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-218</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Angrymodern</b> - 4 хан, 20 фу</li>
+                <li>В игре было 6 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Kvega</b> - Пин-фу, Риичи, дора 1 (<b>Angrymodern</b>), 3 хан, 30 фу</div><div>東2: <b>Kvega</b> - Риичи (<b>Angrymodern</b>), 1 хан, 40 фу (дилерское)</div><div>東2: <b>Angrymodern</b> - Пин-фу, Иипейко, Мендзен цумо, Риичи (цумо), 4 хан, 20 фу</div><div>東3: <b>Kvega</b> - Риичи, дора 2 (<b>Angrymodern</b>), 3 хан, 30 фу</div><div>東4: <b>Angrymodern</b> - Риичи, Мендзен цумо (цумо), 2 хан, 30 фу (дилерское)</div><div>東4: <b>Angrymodern</b> - Риичи, Мендзен цумо (<b>Kvega</b>), 2 хан, 40 фу (дилерское)</div><div>東4: <b>RH</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>南1: <b>Angrymodern</b> - Риичи, Якухай 1, дора 1 (<b>Кузьма</b>), 3 хан, 30 фу</div><div>南2: <b>RH</b> - Якухай 1 (<b>Angrymodern</b>), 1 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>25</td>
+        <td>2016-01-16 15:39:43</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Faithful to the Oath</b></td>
+            <td style='background: transparent; width: 25%;'>38600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+236</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>33700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+87</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>ovvost</b></td>
+            <td style='background: transparent; width: 25%;'>29000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-60</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Benya</b></td>
+            <td style='background: transparent; width: 25%;'>18700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-263</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>kuzmich</b> - 3 хан, 40 фу</li>
+                <li>В игре было 5 побед по рон и 1 победа по цумо</li>
+                <li>В игре было 4 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>kuzmich</b> - Иипейко, дора 2 (<b>Benya</b>), 3 хан, 40 фу (дилерское)</div><div>東1: Ничья (темпай: ovvost)</div><div>東2: <b>Faithful to the Oath</b> - Чиитойцу (<b>kuzmich</b>), 2 хан, 25 фу</div><div>東3: Ничья (темпай: Faithful to the Oath)</div><div>東3: <b>ovvost</b> - Мендзен цумо, Риичи, дора 1 (цумо), 3 хан, 30 фу</div><div>東4: <b>Faithful to the Oath</b> - Риичи, дора 2 (<b>ovvost</b>), 3 хан, 40 фу</div><div>南1: Ничья (темпай: kuzmich, Faithful to the Oath)</div><div>南1: <b>kuzmich</b> - Якухай 1 (<b>Faithful to the Oath</b>), 1 хан, 30 фу (дилерское)</div><div>南1: <b>Faithful to the Oath</b> - Якухай 1 (<b>ovvost</b>), 1 хан, 30 фу</div><div>南2: Ничья (темпай: Benya, Faithful to the Oath, ovvost)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>26</td>
+        <td>2016-01-16 15:34:36</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tensai</b></td>
+            <td style='background: transparent; width: 25%;'>33200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+182</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тян</b></td>
+            <td style='background: transparent; width: 25%;'>32200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+72</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>foboskilla</b></td>
+            <td style='background: transparent; width: 25%;'>29100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-59</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sayaka</b></td>
+            <td style='background: transparent; width: 25%;'>25500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-195</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Tensai</b> - 4 хан, 20 фу</li>
+                <li>В игре было 5 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Tensai</b> - Риичи (<b>foboskilla</b>), 1 хан, 40 фу</div><div>東2: <b>Тян</b> - Джунчан (<b>Sayaka</b>), 2 хан, 30 фу</div><div>東3: <b>Sayaka</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>東4: <b>Тян</b> - Хотей (<b>Sayaka</b>), 1 хан, 30 фу</div><div>南1: <b>Тян</b> - Саншоку (<b>foboskilla</b>), 1 хан, 30 фу</div><div>南2: <b>Tensai</b> - Мендзен цумо, Риичи, Пин-фу, Тан-яо (цумо), 4 хан, 20 фу</div><div>南3: <b>foboskilla</b> - Тан-яо, дора 1 (<b>Тян</b>), 2 хан, 30 фу</div><div>南4: Ничья (темпай: foboskilla, Sayaka, Тян)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>27</td>
+        <td>2016-01-16 15:34:22</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Rabakku</b></td>
+            <td style='background: transparent; width: 25%;'>43800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+288</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Babaika</b></td>
+            <td style='background: transparent; width: 25%;'>39400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+144</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Minori</b></td>
+            <td style='background: transparent; width: 25%;'>21700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-133</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>TslaF</b></td>
+            <td style='background: transparent; width: 25%;'>15100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-299</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Minori</b> - 5 хан</li>
+                <li>В игре было 7 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Rabakku</b> - Риичи, дора 1 (<b>Minori</b>), 2 хан, 40 фу (дилерское)</div><div>東1: <b>Minori</b> - Тан-яо, дора 4 (<b>TslaF</b>), 5 хан</div><div>東2: <b>Babaika</b> - Якухай 1, Чанта (<b>Minori</b>), 2 хан, 40 фу</div><div>東3: Ничья (темпай: Babaika)</div><div>東3: <b>TslaF</b> - Риичи, Пин-фу (<b>Minori</b>), 2 хан, 30 фу</div><div>東4: Ничья (темпай: TslaF)</div><div>南1: <b>Rabakku</b> - Чиитойцу, дора 2 (<b>TslaF</b>), 4 хан, 25 фу (дилерское)</div><div>南1: <b>Babaika</b> - Якухай 2 (<b>Minori</b>), 3 хан, 40 фу</div><div>南2: <b>Rabakku</b> - Тан-яо (<b>TslaF</b>), 1 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>28</td>
+        <td>2016-01-16 15:12:45</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>KTO-TO</b></td>
+            <td style='background: transparent; width: 25%;'>44100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+291</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>maaonni</b></td>
+            <td style='background: transparent; width: 25%;'>29500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+45</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Нубищееее</b></td>
+            <td style='background: transparent; width: 25%;'>26400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-86</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Ushkan</b></td>
+            <td style='background: transparent; width: 25%;'>20000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-250</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>KTO-TO</b> - 3 хан, 30 фу</li>
+                <li>В игре было 5 побед по рон и 5 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>KTO-TO</b> - Риичи, Мендзен цумо, Пин-фу (цумо), 3 хан, 30 фу (дилерское)</div><div>東1: <b>Нубищееее</b> - Пин-фу, Тан-яо, дора 1 (<b>Ushkan</b>), 3 хан, 30 фу</div><div>東2: <b>maaonni</b> - Якухай 1 (<b>KTO-TO</b>), 1 хан, 30 фу (дилерское)</div><div>東2: <b>Ushkan</b> - Тан-яо (<b>Нубищееее</b>), 1 хан, 30 фу</div><div>東3: <b>Нубищееее</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>東4: <b>KTO-TO</b> - Саншоку, Джунчан (цумо), 3 хан, 30 фу</div><div>南1: <b>KTO-TO</b> - Риичи, Мендзен цумо, Пин-фу (цумо), 3 хан, 30 фу (дилерское)</div><div>南1: <b>Ushkan</b> - Якухай 2 (цумо), 2 хан, 30 фу</div><div>南2: <b>KTO-TO</b> - Якухай 1 (<b>Нубищееее</b>), 1 хан, 30 фу</div><div>南3: <b>maaonni</b> - Хоницу, Хотей (<b>Ushkan</b>), 3 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>29</td>
+        <td>2016-01-16 15:08:27</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Nusharik</b></td>
+            <td style='background: transparent; width: 25%;'>51400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+364</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Miyamoto Musashi</b></td>
+            <td style='background: transparent; width: 25%;'>40500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+155</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>June</b></td>
+            <td style='background: transparent; width: 25%;'>32300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-27</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Лорд Тентаклис</b></td>
+            <td style='background: transparent; width: 25%;'>-4200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-492</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Miyamoto Musashi</b> - 4 хан, 30 фу</li>
+                <li>В игре было 8 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>June</b> - Иццу, Риичи (<b>Miyamoto Musashi</b>), 3 хан, 40 фу</div><div>東2: <b>June</b> - Хоницу (<b>Nusharik</b>), 2 хан, 30 фу (дилерское)</div><div>東2: <b>Nusharik</b> - Пин-фу, Риичи (цумо), 3 хан, 20 фу</div><div>東3: <b>Nusharik</b> - Якухай 1 (<b>June</b>), 1 хан, 30 фу (дилерское)</div><div>東3: <b>Nusharik</b> - Якухай 1 (<b>Miyamoto Musashi</b>), 1 хан, 30 фу (дилерское)</div><div>東3: <b>Nusharik</b> - Риичи, дора 2 (<b>Лорд Тентаклис</b>), 3 хан, 40 фу (дилерское)</div><div>東3: <b>Nusharik</b> - Мендзен цумо, Пин-фу, Риичи, дора 1 (цумо), 4 хан, 20 фу (дилерское)</div><div>東3: <b>Miyamoto Musashi</b> - Якухай 1 (<b>Лорд Тентаклис</b>), 1 хан, 30 фу</div><div>東4: <b>Miyamoto Musashi</b> - Якухай 1, дора 3 (<b>Лорд Тентаклис</b>), 4 хан, 30 фу</div><div>南1: <b>Miyamoto Musashi</b> - Якухай 1, дора 3 (<b>Лорд Тентаклис</b>), 4 хан, 30 фу (дилерское)</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>30</td>
+        <td>2016-01-16 15:02:32</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>35500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+205</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RQD</b></td>
+            <td style='background: transparent; width: 25%;'>32500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+75</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Replay</b></td>
+            <td style='background: transparent; width: 25%;'>31800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-32</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Rumkin</b></td>
+            <td style='background: transparent; width: 25%;'>20200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-248</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Replay</b> - 5 хан</li>
+                <li>В игре было 5 побед по рон и 4 победы по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                <li>Полный лог игры:</li>
+                
+                <div class='fullLog'>
+                    <div>東1: <b>Сифси</b> - Тан-яо, дора 1 (<b>Rumkin</b>), 2 хан, 40 фу (дилерское)</div><div>東1: <b>Сифси</b> - Пин-фу, дора 1 (<b>Replay</b>), 2 хан, 30 фу (дилерское)</div><div>東1: Ничья (темпай: RQD)</div><div>東2: <b>Сифси</b> - Тан-яо, дора 1 (<b>Replay</b>), 2 хан, 30 фу</div><div>東3: Ничья (темпай: RQD, Rumkin)</div><div>東3: <b>Сифси</b> - Якухай 1 (<b>RQD</b>), 1 хан, 30 фу</div><div>東4: <b>Rumkin</b> - Якухай 1 (цумо), 1 хан, 30 фу</div><div>南1: <b>Replay</b> - Пин-фу, Иипейко, Риичи, Тан-яо, Мендзен цумо (цумо), 5 хан</div><div>南2: <b>Replay</b> - Якухай 1, Хоницу (<b>RQD</b>), 3 хан, 30 фу</div><div>南3: <b>RQD</b> - Риичи, Мендзен цумо, дора 2 (цумо), 4 хан, 30 фу</div><div>南4: <b>Сифси</b> - Якухай 2 (цумо), 2 хан, 30 фу</div>
+                </div>
+            </ul>
+        </td>
+    </tr><tr><td colspan=4><div class='pagination'><ul>
+<li><a href='page2.htm'>Назад</a></li>
+<li><a href='page4.htm'>Вперед</a></li>
+</ul></div></td></tr></table></div>
+
+</body>
+</html>

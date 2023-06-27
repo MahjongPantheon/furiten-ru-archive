@@ -1,0 +1,421 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0046)http://turnir2015.furiten.ru/timer/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="../last/default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг игроков</a></li>
+                    <li><a href="../graphs/default.htm">Графики рейтинга</a></li>
+                    <li><a href="../logs/default.htm">Логи</a></li>
+                    <li><a href="../add/default.htm">Добавить игру&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../reg/default.htm">Добавить игрока&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../login/default.htm">Вход&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="default.htm" target="_blank">Таймер</a></li>
+                    <li><a href="../sortition/default.htm" target="_blank">Рассадка</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    
+<style type="text/css">
+    .players {
+        width: 100%;
+    }
+
+    .players div {
+        font-size: 45px;
+        padding: 12px;
+    }
+
+    .players > div {
+        position: absolute;
+    }
+
+    span.success {
+        color: #393;
+    }
+
+    span.fail {
+        color: #c44;
+    }
+
+    .navbar-inner {
+        display: none;
+    }
+
+    .timer {
+        font-size: 300px;
+        font-family: monospace;
+        font-weight: bold;
+        margin-top: 200px;
+        text-align: center;
+    }
+</style>
+
+<script type="text/javascript">
+    Array.prototype.shuffle = function() {
+        var i = this.length, j, tempi, tempj;
+        if ( i == 0 ) return false;
+        while ( --i ) {
+            j       = Math.floor( Math.random() * ( i + 1 ) );
+            tempi   = this[i];
+            tempj   = this[j];
+            this[i] = tempj;
+            this[j] = tempi;
+        }
+        return this;
+    };
+
+    $(function() {
+        var table = $('#table-players');
+        var rowsCount = $('#table-players > div').length;
+        var orderArray = [];
+        for (var i = 0; i < rowsCount; i ++) {
+            orderArray.push(i);
+        }
+
+        orderArray = orderArray.shuffle();
+
+        var counter = 0;
+        var tabletimer = window.setInterval(function() {
+            table.children('div:visible').animate({
+                opacity: 0,
+                marginTop: -30
+            }, 300);
+            var randowRow = orderArray[(counter++) % rowsCount];
+            table.children('div:eq(' + randowRow + ')').css({opacity: 0, paddingTop: 30}).show().animate({
+                opacity: 1,
+                paddingTop: 0
+            }, 300);
+
+			// request new content every minute
+			if (counter % 12 == 0) {
+				$('#table-players').load('../timer.phpnewdata1', function() {
+					// update it all...
+                    rowsCount = $('#table-players > div').length;
+                    orderArray = [];
+                    for (var i = 0; i < rowsCount; i ++) {
+                        orderArray.push(i);
+                    }
+
+                    orderArray = orderArray.shuffle();
+				});
+			}
+        }, 5000);
+
+
+        var snd5min = new Audio("../assets/5min.wav"); // buffers automatically when created
+        var sndend = new Audio("../assets/endgame.wav"); // buffers automatically when created
+
+        var initialTime = '75:00'.split(':');
+        var minutes = parseInt(initialTime[0]);
+        var seconds = parseInt(initialTime[1]) / 10;
+        var timer = window.setInterval(function() {
+            if (seconds == 0) {
+                minutes --;
+                seconds = 6;
+            }
+
+            seconds--;
+            var addedZero = '';
+            if (seconds < 1) {
+                addedZero = '0';
+            }
+
+            if (minutes < 5) {
+                $('#time').css({color: '#f55'});
+                if (snd5min) {
+                    snd5min.play();
+                    snd5min = false; // нам надо проиграть звук только один раз
+                }
+            }
+
+            if (minutes < 0) {
+                window.clearInterval(timer);
+                $('#time').html('СТОП!');
+                if (sndend) {
+                    sndend.play();
+                    sndend = false; // нам надо проиграть звук только один раз
+                }
+            } else {
+                $('#time').html(minutes + ':' + addedZero + seconds * 10);
+            }
+        }, 10000);
+    });
+</script>
+
+<div class="players" id="table-players" style="margin-left: 300px; margin-right: 300px">
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">kuzmich</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1579.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Jun</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1570.5</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Сладкий</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1558.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Harmony</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1556.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Flashka</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1548.5</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">TslaF</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1544.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Oringer</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1543.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Барон</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1538.2</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Такара</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1532.8</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Selva</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1532</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Тян</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1525.7</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">maki</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1522.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">HadoKEN</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1520.2</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Сережа</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1508.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Сифси</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1507</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Валерия</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1503.5</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Samal</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1501.6</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Yagef</div>
+            <div style="width: 200px; display: table-cell"><span class="success">1501.1</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Benya</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1491</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Airee</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1489</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">НоСоЯк</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1487.8</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Пай</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1482</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">JoJo</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1481.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Shandow</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1480.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Тенсай</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1475.5</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Хиф</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1474.2</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Nusharik</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1472.1</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">ЕЩЕ СЛАЩЕ!</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1472</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">eComs</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1466.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Psyhister</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1466.5</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Richi</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1465.8</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Тако-кун</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1462.2</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Сладкоежка</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1460.9</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Daler</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1428.1</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Ushkan</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1399.4</span></div>
+        </div>
+    </div>
+        <div style="display: none;">
+                <div style="height: 30px; display: table-row;">
+            <div style="width: 300px; display: table-cell">Кузьма</div>
+            <div style="width: 200px; display: table-cell"><span class="fail">1388</span></div>
+        </div>
+    </div>
+    </div>
+
+<div class="timer">
+    <span id="time">75:00</span>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0036)http://turnir2013.furiten.ru/add.php --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mahjong statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.jqplot.min.css" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="../httpsfuriten.ru/default.htm" title="Главная" style="padding-right:0; padding-bottom:0"><img src="../httpsfuriten.ru/wp-content/themes/wordpress-bootstrap/assets/ico/apple-touch-icon-57-precomposed.png" style="height: 24px;"></a></li>
+                    <li><a href="last.htm">Последние игры</a></li>
+                    <li><a href="players.htm">Рейтинг игроков</a></li>
+                    <li><a href="graphs.htm">Графики рейтинга</a></li>
+                    <li><a href="add.htm">Добавить игру&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="reg.htm">Добавить игрока&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+	<div class="span9">
+<h2>Добавить игру</h2><br>
+Формат:<br>
+<pre>
+[player][:][(-)?\d{,5}] [player][:][(-)?\d{,5}] [player][:][(-)?\d{,5}] [player][:][(-)?\d{,5}]
+[1-4] ron [player] from [player] [5-12]han
+[1-4] ron [player] from [player] [5-12]han dealer
+[1-4] ron [player] from [player] [1-4]han \d{2,3}fu
+[1-4] ron [player] from [player] [1-4]han \d{2,3}fu dealer
+[1-4] ron [player] from [player] yakuman
+[1-4] ron [player] from [player] yakuman dealer
+[1-4] tsumo [player] [5-12]han
+[1-4] tsumo [player] [5-12]han dealer
+[1-4] tsumo [player] [1-4]han \d{2,3}fu
+[1-4] tsumo [player] [1-4]han \d{2,3}fu dealer
+[1-4] tsumo [player] yakuman
+[1-4] tsumo [player] yakuman dealer
+[1-4] draw tempai nobody
+[1-4] draw tempai [player]
+[1-4] draw tempai [player] [player]
+[1-4] draw tempai [player] [player] [player]
+[1-4] draw tempai all
+[1-4] chombo [player]
+[1-4] chombo [player] dealer
+</pre>
+Пример:<br>
+<pre>
+heilage:12300 Chaos:32000 Frontier:-2000 Manabi:30000
+1 ron heilage 2han 30fu
+2 ron Chaos 2han 40fu dealer
+3 tsumo Frontier yakuman
+4 draw
+4 tsumo heilage 5han
+4 ron heilage yakuman dealer
+итд
+</pre>
+<form action="" method="POST" id="addform">
+    <textarea name="content" style="width:100%; height: 300px"></textarea>
+    <div class="row">
+        <div class="span10">
+            <input type="submit" value="Добавить" class="btn btn-primary btn-large">
+        </div>
+    </div>
+
+</form>
+    </div>
+	<div class="span3">
+		<h5>Алиасы</h5>
+        <table border=0 class='table table-condensed'>
+		<tr><td>Airee</td><td> = </td><td>airee</td></tr>
+<tr><td>Amil</td><td> = </td><td>amil</td></tr>
+<tr><td>eComs</td><td> = </td><td>ecoms</td></tr>
+<tr><td>flashka</td><td> = </td><td>flashka</td></tr>
+<tr><td>Frontier</td><td> = </td><td>frontier</td></tr>
+<tr><td>Harmony</td><td> = </td><td>harmony</td></tr>
+<tr><td>John Dillinger</td><td> = </td><td>musashi</td></tr>
+<tr><td>Jun</td><td> = </td><td>jun</td></tr>
+<tr><td>Kenny</td><td> = </td><td>kenny</td></tr>
+<tr><td>Kiossarin</td><td> = </td><td>kiossarin</td></tr>
+<tr><td>kuzmich</td><td> = </td><td>kuzmich</td></tr>
+<tr><td>Mithagar</td><td> = </td><td>mithagar</td></tr>
+<tr><td>Nagi Souichirou</td><td> = </td><td>nagi</td></tr>
+<tr><td>nekokuza</td><td> = </td><td>neko</td></tr>
+<tr><td>RH</td><td> = </td><td>rh</td></tr>
+<tr><td>Selva</td><td> = </td><td>selva</td></tr>
+<tr><td>Shandow</td><td> = </td><td>shandow</td></tr>
+<tr><td>Silen-san</td><td> = </td><td>silen</td></tr>
+<tr><td>Sus-lik</td><td> = </td><td>suslik</td></tr>
+<tr><td>Tensai</td><td> = </td><td>tensai</td></tr>
+<tr><td>Vell</td><td> = </td><td>vell</td></tr>
+<tr><td>Wyqen</td><td> = </td><td>wyqen</td></tr>
+<tr><td>ZOKer</td><td> = </td><td>zoker</td></tr>
+<tr><td>Влад</td><td> = </td><td>vlad</td></tr>
+<tr><td>Кузьма</td><td> = </td><td>kuzma</td></tr>
+<tr><td>Лера</td><td> = </td><td>lera</td></tr>
+<tr><td>Лёха</td><td> = </td><td>leha</td></tr>
+<tr><td>Маки</td><td> = </td><td>maki</td></tr>
+<tr><td>Нюша</td><td> = </td><td>nusha</td></tr>
+<tr><td>Сифси</td><td> = </td><td>sifsi</td></tr>
+<tr><td>Такара</td><td> = </td><td>takara</td></tr>
+<tr><td>Хиф</td><td> = </td><td>hif</td></tr>
+		</table>
+	</div>
+</div></div>
+
+</body>
+</html>

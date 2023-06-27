@@ -1,0 +1,411 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0037)http://turnir2013.furiten.ru/last.php --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mahjong statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.jqplot.min.css" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="../httpsfuriten.ru/default.htm" title="Главная" style="padding-right:0; padding-bottom:0"><img src="../httpsfuriten.ru/wp-content/themes/wordpress-bootstrap/assets/ico/apple-touch-icon-57-precomposed.png" style="height: 24px;"></a></li>
+                    <li><a href="last.htm">Последние игры</a></li>
+                    <li><a href="players.htm">Рейтинг игроков</a></li>
+                    <li><a href="graphs.htm">Графики рейтинга</a></li>
+                    <li><a href="add.htm">Добавить игру&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="reg.htm">Добавить игрока&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Последние игры</h2>
+<br>
+
+    <table class='table table-striped table-condensed'>
+    <tr>
+        <th>#</th>
+        <th>Время регистрации</th>
+        <th>Игроки</th>
+        <th>Всякое разное</th>
+    </tr><tr>
+        <td>1</td>
+        <td>2013-01-05 11:14:56</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sus-lik</b></td>
+            <td style='background: transparent; width: 25%;'>52600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+376</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Хиф</b></td>
+            <td style='background: transparent; width: 25%;'>29000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+40</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Amil</b></td>
+            <td style='background: transparent; width: 25%;'>28500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-65</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Такара</b></td>
+            <td style='background: transparent; width: 25%;'>8900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-361</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Sus-lik</b> - 6 хан</li>
+                <li>В игре было 4 победы по рон и 1 победа по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>2</td>
+        <td>2013-01-05 11:12:32</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>eComs</b></td>
+            <td style='background: transparent; width: 25%;'>52800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+378</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Лёха</b></td>
+            <td style='background: transparent; width: 25%;'>27500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+25</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Влад</b></td>
+            <td style='background: transparent; width: 25%;'>24300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-107</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Vell</b></td>
+            <td style='background: transparent; width: 25%;'>14400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-306</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>eComs</b> - 6 хан</li>
+                <li>В игре было 6 побед по рон и 1 победа по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>3</td>
+        <td>2013-01-05 11:11:01</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Selva</b></td>
+            <td style='background: transparent; width: 25%;'>53200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+382</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Kiossarin</b></td>
+            <td style='background: transparent; width: 25%;'>31300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+63</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Shandow</b></td>
+            <td style='background: transparent; width: 25%;'>22900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-121</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Nagi Souichirou</b></td>
+            <td style='background: transparent; width: 25%;'>12600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-324</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Selva</b> - 7 хан</li>
+                <li>В игре было 6 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>4</td>
+        <td>2013-01-05 11:09:39</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Harmony</b></td>
+            <td style='background: transparent; width: 25%;'>44100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+291</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Silen-san</b></td>
+            <td style='background: transparent; width: 25%;'>32900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+79</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>John Dillinger</b></td>
+            <td style='background: transparent; width: 25%;'>25500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-95</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Mithagar</b></td>
+            <td style='background: transparent; width: 25%;'>17500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-475</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Silen-san</b> - 5 хан</li>
+                <li>В игре было 1 победа по рон и 2 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                <li>В игре было 1 штраф чомбо</li>
+            </ul>
+        </td>
+    </tr><tr>
+        <td>5</td>
+        <td>2013-01-05 11:07:36</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tensai</b></td>
+            <td style='background: transparent; width: 25%;'>32800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+178</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Airee</b></td>
+            <td style='background: transparent; width: 25%;'>31700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+67</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Кузьма</b></td>
+            <td style='background: transparent; width: 25%;'>30600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-44</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RH</b></td>
+            <td style='background: transparent; width: 25%;'>23900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-211</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Кузьма</b> - 2 хан, 40 фу</li>
+                <li>В игре было 3 победы по рон и 1 победа по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>6</td>
+        <td>2013-01-05 11:03:42</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Маки</b></td>
+            <td style='background: transparent; width: 25%;'>34700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+197</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Wyqen</b></td>
+            <td style='background: transparent; width: 25%;'>33800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+88</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>nekokuza</b></td>
+            <td style='background: transparent; width: 25%;'>27500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-75</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Jun</b></td>
+            <td style='background: transparent; width: 25%;'>24000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-210</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Маки</b> - 3 хан, 40 фу</li>
+                <li>В игре было 3 победы по рон и 1 победа по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>7</td>
+        <td>2013-01-05 10:56:55</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Нюша</b></td>
+            <td style='background: transparent; width: 25%;'>54400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+394</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Лера</b></td>
+            <td style='background: transparent; width: 25%;'>25700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+7</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>ZOKer</b></td>
+            <td style='background: transparent; width: 25%;'>21600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-134</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Kenny</b></td>
+            <td style='background: transparent; width: 25%;'>18300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-267</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Нюша</b> - 5 хан</li>
+                <li>В игре было 1 победа по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>8</td>
+        <td>2013-01-05 10:52:12</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>55300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+403</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Frontier</b></td>
+            <td style='background: transparent; width: 25%;'>38700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+137</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>flashka</b></td>
+            <td style='background: transparent; width: 25%;'>26400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-86</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>-400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-454</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Сифси</b> - 6 хан</li>
+                <li>В игре было 4 победы по рон и 1 победа по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>9</td>
+        <td>2013-01-05 10:15:09</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Frontier</b></td>
+            <td style='background: transparent; width: 25%;'>43100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+281</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Selva</b></td>
+            <td style='background: transparent; width: 25%;'>27900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+29</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>25000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-100</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Vell</b></td>
+            <td style='background: transparent; width: 25%;'>24000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-210</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Frontier</b> - 4 хан, 40 фу</li>
+                <li>В игре было 3 победы по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>10</td>
+        <td>2013-01-05 10:14:07</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>nekokuza</b></td>
+            <td style='background: transparent; width: 25%;'>37000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+220</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Kiossarin</b></td>
+            <td style='background: transparent; width: 25%;'>33400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+84</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>27800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-72</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Хиф</b></td>
+            <td style='background: transparent; width: 25%;'>21800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-232</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Kiossarin</b> - 5 хан</li>
+                <li>В игре было 2 победы по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr><td colspan=4><div class='pagination'><ul>
+<li><a href='last.phppage1.htm'>Назад</a></li>
+<li><a href='last.phppage2.htm'>Вперед</a></li>
+</ul></div></td></tr></table></div>
+
+</body>
+</html>

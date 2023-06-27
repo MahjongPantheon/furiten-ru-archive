@@ -1,0 +1,411 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0041)http://turnir2015.furiten.ru/last/?page=3 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг игроков</a></li>
+                    <li><a href="../graphs/default.htm">Графики рейтинга</a></li>
+                    <li><a href="../logs/default.htm">Логи</a></li>
+                    <li><a href="../add/default.htm">Добавить игру&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../reg/default.htm">Добавить игрока&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../login/default.htm">Вход&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../timer/default.htm" target="_blank">Таймер</a></li>
+                    <li><a href="../sortition/default.htm" target="_blank">Рассадка</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Последние игры</h2>
+<br>
+
+    <table class='table table-striped table-condensed'>
+    <tr>
+        <th>#</th>
+        <th>Время регистрации</th>
+        <th>Игроки</th>
+        <th>Всякое разное</th>
+    </tr><tr>
+        <td>21</td>
+        <td>2015-01-05 09:15:23</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Airee</b></td>
+            <td style='background: transparent; width: 25%;'>41000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+260</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Samal</b></td>
+            <td style='background: transparent; width: 25%;'>33300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+83</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Benya</b></td>
+            <td style='background: transparent; width: 25%;'>26900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-81</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Selva</b></td>
+            <td style='background: transparent; width: 25%;'>16800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-282</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Airee</b> - 4 хан, 40 фу</li>
+                <li>В игре было 6 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 4 ничьи/пересдачи</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>22</td>
+        <td>2015-01-05 09:13:24</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Harmony</b></td>
+            <td style='background: transparent; width: 25%;'>50500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+355</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>32200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+72</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сладкий</b></td>
+            <td style='background: transparent; width: 25%;'>23800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-112</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>maki</b></td>
+            <td style='background: transparent; width: 25%;'>8500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-365</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Harmony</b> - 5 хан</li>
+                <li>В игре было 6 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>23</td>
+        <td>2015-01-05 09:10:02</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>JoJo</b></td>
+            <td style='background: transparent; width: 25%;'>35000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+200</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Валерия</b></td>
+            <td style='background: transparent; width: 25%;'>30300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+53</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Daler</b></td>
+            <td style='background: transparent; width: 25%;'>27500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-75</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Кузьма</b></td>
+            <td style='background: transparent; width: 25%;'>27200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-178</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Кузьма</b> - 5 хан</li>
+                <li>В игре было 7 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>24</td>
+        <td>2015-01-05 09:07:55</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Oringer</b></td>
+            <td style='background: transparent; width: 25%;'>41900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+269</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>34100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+91</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тян</b></td>
+            <td style='background: transparent; width: 25%;'>25000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-100</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Shandow</b></td>
+            <td style='background: transparent; width: 25%;'>19000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-260</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Тян</b> - 7 хан</li>
+                <li>В игре было 7 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>25</td>
+        <td>2015-01-05 09:03:23</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Yagef</b></td>
+            <td style='background: transparent; width: 25%;'>37300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+223</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Jun</b></td>
+            <td style='background: transparent; width: 25%;'>36200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+112</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тако-кун</b></td>
+            <td style='background: transparent; width: 25%;'>31500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-35</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тенсай</b></td>
+            <td style='background: transparent; width: 25%;'>15000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-300</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Jun</b> - 7 хан</li>
+                <li>В игре было 5 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>26</td>
+        <td>2015-01-05 09:00:52</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>ЕЩЕ СЛАЩЕ!</b></td>
+            <td style='background: transparent; width: 25%;'>32400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+174</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Psyhister</b></td>
+            <td style='background: transparent; width: 25%;'>32000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+70</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Richi</b></td>
+            <td style='background: transparent; width: 25%;'>30500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-45</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Пай</b></td>
+            <td style='background: transparent; width: 25%;'>26000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-190</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Psyhister</b> - 3 хан, 30 фу</li>
+                <li>В игре было 5 побед по рон и 2 победы по цумо</li>
+                <li>В игре было 2 ничьи/пересдачи</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>27</td>
+        <td>2015-01-05 08:34:24</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>HadoKEN</b></td>
+            <td style='background: transparent; width: 25%;'>50700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+357</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>eComs</b></td>
+            <td style='background: transparent; width: 25%;'>35000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+100</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сережа</b></td>
+            <td style='background: transparent; width: 25%;'>34400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-6</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сладкоежка</b></td>
+            <td style='background: transparent; width: 25%;'>-100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-451</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>HadoKEN</b> - 7 хан</li>
+                <li>В игре было 4 победы по рон и 2 победы по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>28</td>
+        <td>2015-01-05 07:49:50</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Samal</b></td>
+            <td style='background: transparent; width: 25%;'>34400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+194</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>eComs</b></td>
+            <td style='background: transparent; width: 25%;'>32800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+78</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Хиф</b></td>
+            <td style='background: transparent; width: 25%;'>27400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-76</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>TslaF</b></td>
+            <td style='background: transparent; width: 25%;'>25400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-196</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>eComs</b> - 4 хан, 30 фу</li>
+                <li>В игре было 8 побед по рон и 1 победа по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>29</td>
+        <td>2015-01-05 07:47:57</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Selva</b></td>
+            <td style='background: transparent; width: 25%;'>36200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+212</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сладкоежка</b></td>
+            <td style='background: transparent; width: 25%;'>33800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+88</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Такара</b></td>
+            <td style='background: transparent; width: 25%;'>25700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-93</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Пай</b></td>
+            <td style='background: transparent; width: 25%;'>24100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-209</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>Selva</b> - 5 хан</li>
+                <li>В игре было 8 побед по рон и 1 победа по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>30</td>
+        <td>2015-01-05 07:45:52</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>48500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+335</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>HadoKEN</b></td>
+            <td style='background: transparent; width: 25%;'>31500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+65</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Барон</b></td>
+            <td style='background: transparent; width: 25%;'>26400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-86</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>JoJo</b></td>
+            <td style='background: transparent; width: 25%;'>13600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-314</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li>Лучшая рука собрана игроком <b>HadoKEN</b> - 5 хан</li>
+                <li>В игре было 6 побед по рон и 3 победы по цумо</li>
+                <li>В игре было 1 ничья/пересдача</li>
+                
+            </ul>
+        </td>
+    </tr><tr><td colspan=4><div class='pagination'><ul>
+<li><a href='page2.htm'>Назад</a></li>
+<li><a href='page4.htm'>Вперед</a></li>
+</ul></div></td></tr></table></div>
+
+</body>
+</html>

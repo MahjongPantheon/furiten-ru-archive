@@ -1,0 +1,276 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0055)http://online-june2016.furiten.ru/graphs/?user=recursor --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+            	    <li><a href="../../httpsfuriten.ru/default.htm" target="_blank">Фуритен</a></li>
+                    <li><a href="../last/default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг</a></li>
+                    <li><a href="default.htm">Графики</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Графики рейтинга</h2>
+<br>
+<form action="" method="get" class="well form-search">
+    <input placeholder="Игрок" type="text" name="user" value='recursor'>
+    <input type="submit" value="Посмотреть" class="btn">
+</form>
+<div id='chart_rating'></div>
+<style type="text/css">
+    .own {
+        background-color: #ffff00 !important;
+    }
+    .jqplot-highlighter-tooltip {
+        border: 1px solid #555;
+        -webkit-box-shadow: 4px 4px 24px 1px rgba(0, 0, 0, 0.7);
+        box-shadow: 4px 4px 24px 1px rgba(0, 0, 0, 0.7);
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        ////// rating plot
+                var points = [[0,1500],[1,1498],[2,1498],[3,1497],[4,1500],[5,1499],[6,1497],[7,1499]];
+        var games = [[{"id":13,"game_id":4,"username":"Githz","score":45800,"result_score":30.8,"place":1},{"id":14,"game_id":4,"username":"41u","score":34100,"result_score":9.1,"place":2},{"id":15,"game_id":4,"username":"Manabi0","score":27200,"result_score":-7.8,"place":3},{"id":16,"game_id":4,"username":"recursor","score":12900,"result_score":-32.1,"place":4}],[{"id":61,"game_id":16,"username":"Frodo","score":34500,"result_score":19.5,"place":1},{"id":62,"game_id":16,"username":"recursor","score":34100,"result_score":9.1,"place":2},{"id":63,"game_id":16,"username":"dRainCat","score":26500,"result_score":-8.5,"place":3},{"id":64,"game_id":16,"username":"Suanko","score":24900,"result_score":-20.1,"place":4}],[{"id":93,"game_id":24,"username":"relghufr","score":32100,"result_score":17.1,"place":1},{"id":94,"game_id":24,"username":"dis","score":31500,"result_score":6.5,"place":2},{"id":95,"game_id":24,"username":"DpakoH87","score":30000,"result_score":-5,"place":3},{"id":96,"game_id":24,"username":"recursor","score":26400,"result_score":-18.6,"place":4}],[{"id":125,"game_id":32,"username":"recursor","score":61800,"result_score":46.8,"place":1},{"id":126,"game_id":32,"username":"Benawi","score":26100,"result_score":1.1,"place":2},{"id":127,"game_id":32,"username":"dis","score":17200,"result_score":-17.8,"place":3},{"id":128,"game_id":32,"username":"DpakoH87","score":14900,"result_score":-30.1,"place":4}],[{"id":145,"game_id":37,"username":"Benawi","score":35800,"result_score":20.8,"place":1},{"id":146,"game_id":37,"username":"babaika","score":33300,"result_score":8.3,"place":2},{"id":147,"game_id":37,"username":">:3","score":28500,"result_score":-6.5,"place":3},{"id":148,"game_id":37,"username":"recursor","score":22400,"result_score":-22.6,"place":4}],[{"id":161,"game_id":41,"username":"Frodo","score":41000,"result_score":26,"place":1},{"id":162,"game_id":41,"username":"Monti","score":34200,"result_score":9.2,"place":2},{"id":163,"game_id":41,"username":"Alfa-Tom","score":28900,"result_score":-6.1,"place":3},{"id":164,"game_id":41,"username":"recursor","score":15900,"result_score":-29.1,"place":4}],[{"id":221,"game_id":56,"username":"recursor","score":47400,"result_score":32.4,"place":1},{"id":222,"game_id":56,"username":"dRainCat","score":38900,"result_score":13.9,"place":2},{"id":223,"game_id":56,"username":"Jun-90","score":31000,"result_score":-4,"place":3},{"id":224,"game_id":56,"username":">:3","score":2700,"result_score":-42.3,"place":4}]];
+        var user = 'recursor';
+        var plot_rating = $.jqplot('chart_rating', [points], {
+            axes:{
+                xaxis:{
+                    //label:'Сыграно игр',
+                    ticks: [0,1,2,3,4,5,6,7],
+                    tickInterval: 1,
+                    tickOptions: {
+                        formatString: '%d'
+                    }
+                },
+                yaxis:{
+                    label:'Рейтинг'
+                }
+            },
+            highlighter: {
+                show: true,
+                sizeAdjust: 7,
+                tooltipContentEditor: function(str, seriesIndex, pointIndex) {
+                    var g = games[pointIndex-1];
+                    var players = [];
+                    var outcome = '';
+                    players.push('<table style="background-color:#fff; padding-bottom: 0; margin-bottom: 0" class="table table-condensed table-bordered">');
+                    for (var i = 0; i < 4; i++) {
+                        if (g[i].result_score < 0) {
+                            outcome = 'important';
+                        } else {
+                            outcome = 'success';
+                        }
+                        if (g[i].username == user) {
+                            own = 'own';
+                        } else {
+                            own = '';
+                        }
+                        players.push(
+                            '<tr class=" ' + own + '">' +
+                            '<td><b>' + g[i].username + '</b>: ' +
+                            '</td><td>' +
+                            '<span class="badge badge-' + outcome + '">' + g[i].result_score + '</span>' +
+                            '</td></tr>');
+                    }
+                    players.push('</table>');
+                    return players.join('');
+                }
+            },
+            cursor: {
+                show: false
+            },
+            seriesDefaults:{
+                rendererOptions: {
+                    smooth: true
+                }
+            }
+        });
+
+        ////// hands plot
+
+        $(document).ready(function(){
+            var han_data = [
+                ['1', 1], 
+['2', 4], 
+['3', 5], 
+['4', 4], 
+['5', 0], 
+['6', 1], 
+['7', 0], 
+['8', 0], 
+['9', 0], 
+['10', 0], 
+['11', 0], 
+['12', 0], 
+['★', 0]            ];
+
+            var yaku_data = [
+                [1, 'Иццу'], 
+[1, 'Якухай 1'], 
+[1, 'Саншоку'], 
+[3, 'Иппацу'], 
+[3, 'Тан-яо'], 
+[6, 'Пин-фу'], 
+[7, 'Мендзен цумо'], 
+[12, 'Риичи']            ];
+
+            var plot_hands = $.jqplot('chart_hands', [han_data], {
+                title: 'Ценность собранных рук',
+                series:[{renderer:$.jqplot.BarRenderer}],
+                axesDefaults: {
+                    tickOptions: {
+                        fontSize: '12pt'
+                    }
+                },
+                axes: {
+                    xaxis: {
+                        label: 'Хан',
+                        renderer: $.jqplot.CategoryAxisRenderer
+                    }
+                }
+            });
+
+            var plot_yaku = $.jqplot('chart_yaku', [yaku_data], {
+                height: 400,
+                title: 'Собранные яку (за все время)',
+                series:[{
+                    renderer: $.jqplot.BarRenderer,
+                    rendererOptions: {
+                        barWidth: 7,
+                        shadowOffset: 1,
+                        barDirection: 'horizontal'
+                    }
+                }],
+                axesDefaults: {
+                    tickOptions: {
+                        fontSize: '12pt'
+                    }
+                },
+                axes: {
+                    yaxis: {
+                        renderer: $.jqplot.CategoryAxisRenderer
+                    },
+                    xaxis: {
+                        min: 0,
+                        tickInterval: 1,
+                        tickOptions: {
+                            formatString: '%d'
+                        }
+                    }
+                }
+            });
+        });
+
+    });
+</script>
+<hr>
+
+<div class="row">
+    <div class="span4">
+        <table class="table table-striped table-condensed">
+            <tr><td colspan="2" style="padding-left: 20px"><b>Общая статистика:</b></td></tr>
+            <tr><td>Сыграно игр</td><td>
+                    <b>7</b></td></tr>
+            <tr><td>Сыграно раздач</td><td>
+                    <b>84</b></td></tr>
+            <tr><td>Выиграно раздач</td><td>
+                    <b>15</b> &nbsp;
+                    (17.86%)</td></tr>
+            <tr><td>Интегральный рейтинг</td><td>
+                    -7.2849999999999</td></tr>
+            <tr><td colspan="2" style="padding-left: 20px"><b>По исходам раздач:</b></td></tr>
+            <tr><td>Выигрышей по рон</td><td>
+                    <b>8</b> &nbsp;
+                    (9.52%)</td></tr>
+            <tr><td>Выигрышей по цумо</td><td>
+                    <b>7</b> &nbsp;
+                    (8.33%)</td></tr>
+            <tr><td>Штрафов чомбо</td><td>
+                    <b>0</b> &nbsp;
+                    (0.00%)</td></tr>
+            <tr><td>Ставок риичи</td><td>
+                    <b>0</b> &nbsp;
+                    (0.00%)</td></tr>
+            <tr><td>- из них выигравших</td><td>
+                    <b>0</b> &nbsp;
+                    (0.00%)</td></tr>
+            <tr><td>- из них потерянных</td><td>
+                    <b>0</b> &nbsp;
+                    (0.00%)</td></tr>
+            <tr><td>Набросов в рон</td><td>
+                    <b>22</b>
+                    (26.19%)</td></tr>
+            <tr><td>- в том числе из-за риичи</td><td>
+                    <b>0</b>
+                    (0.00%)</td></tr>
+            <tr><td colspan="2" style="padding-left: 20px"><b>По занятым местам:</b></td></tr>
+            <tr><td>1 место</td><td>
+                    28.57 %</td></tr>
+            <tr><td>2 место</td><td>
+                    14.29 %</td></tr>
+            <tr><td>3 место</td><td>
+                    0.00 %</td></tr>
+            <tr><td>4 место</td><td>
+                    57.14 %</td></tr>
+        </table>
+    </div>
+    <div class="span8">
+        <div id='chart_hands'></div>
+        <hr />
+        <div id='chart_yaku'></div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

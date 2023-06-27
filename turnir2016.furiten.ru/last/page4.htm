@@ -1,0 +1,420 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0041)http://turnir2016.furiten.ru/last/?page=4 --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг</a></li>
+                    <li><a href="../graphs/default.htm">Графики</a></li>
+                                        <li><a href="../add/default.htm">+Игра&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                                        <li><a href="../reg/default.htm">+Игрок&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../login/default.htm">Вход&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../timer/default.htm" target="_blank">Таймер</a></li>
+                    <li><a href="../sortition/24202913/default.htm" target="_blank">Рассадка&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Последние игры</h2>
+<br>
+
+    <table class='table table-striped table-condensed'>
+    <tr>
+        <th>#</th>
+        <th>Время регистрации</th>
+        <th>Игроки</th>
+        <th>Всякое разное</th>
+    </tr><tr>
+        <td>31</td>
+        <td>2016-01-05 10:08:04</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Faithful to the Oath</b></td>
+            <td style='background: transparent; width: 25%;'>37500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+225</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>33600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+86</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>ovvost</b></td>
+            <td style='background: transparent; width: 25%;'>30300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-47</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Benya</b></td>
+            <td style='background: transparent; width: 25%;'>18600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-264</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>32</td>
+        <td>2016-01-05 10:07:34</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тян</b></td>
+            <td style='background: transparent; width: 25%;'>35200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+202</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tensai</b></td>
+            <td style='background: transparent; width: 25%;'>30200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+52</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>foboskilla</b></td>
+            <td style='background: transparent; width: 25%;'>29100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-59</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sayaka</b></td>
+            <td style='background: transparent; width: 25%;'>25500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-195</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>33</td>
+        <td>2016-01-05 10:07:09</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>yllin</b></td>
+            <td style='background: transparent; width: 25%;'>39900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+249</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Oringer</b></td>
+            <td style='background: transparent; width: 25%;'>39700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+147</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Richi</b></td>
+            <td style='background: transparent; width: 25%;'>27900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-71</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>olex</b></td>
+            <td style='background: transparent; width: 25%;'>12500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-325</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>34</td>
+        <td>2016-01-05 10:06:41</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>eComs</b></td>
+            <td style='background: transparent; width: 25%;'>47900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+329</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Sayaka</b></td>
+            <td style='background: transparent; width: 25%;'>43700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+187</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>KTO-TO</b></td>
+            <td style='background: transparent; width: 25%;'>14300</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-207</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сладкий</b></td>
+            <td style='background: transparent; width: 25%;'>14100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-309</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>35</td>
+        <td>2016-01-05 10:06:12</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Rumkin</b></td>
+            <td style='background: transparent; width: 25%;'>44200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+292</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>WE8</b></td>
+            <td style='background: transparent; width: 25%;'>36000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+110</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Nusharik</b></td>
+            <td style='background: transparent; width: 25%;'>30000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-50</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Кузьма</b></td>
+            <td style='background: transparent; width: 25%;'>9800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-352</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>36</td>
+        <td>2016-01-05 10:05:47</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Miyamoto Musashi</b></td>
+            <td style='background: transparent; width: 25%;'>36100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+211</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>yllin</b></td>
+            <td style='background: transparent; width: 25%;'>33000</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+80</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>RH</b></td>
+            <td style='background: transparent; width: 25%;'>29400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-56</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Нубищееее</b></td>
+            <td style='background: transparent; width: 25%;'>21500</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-235</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>37</td>
+        <td>2016-01-05 10:05:16</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Барон</b></td>
+            <td style='background: transparent; width: 25%;'>37400</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+224</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>foboskilla</b></td>
+            <td style='background: transparent; width: 25%;'>32700</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+77</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>kuzmich</b></td>
+            <td style='background: transparent; width: 25%;'>26100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-89</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>TslaF</b></td>
+            <td style='background: transparent; width: 25%;'>23800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-212</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>38</td>
+        <td>2016-01-05 10:04:37</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Richi</b></td>
+            <td style='background: transparent; width: 25%;'>35100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+201</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Mad Cat</b></td>
+            <td style='background: transparent; width: 25%;'>30900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+59</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>maaonni</b></td>
+            <td style='background: transparent; width: 25%;'>27200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-78</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Faithful to the Oath</b></td>
+            <td style='background: transparent; width: 25%;'>26800</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-182</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>39</td>
+        <td>2016-01-05 10:04:09</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Сифси</b></td>
+            <td style='background: transparent; width: 25%;'>40100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+251</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Tensai</b></td>
+            <td style='background: transparent; width: 25%;'>31100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+61</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Kvega</b></td>
+            <td style='background: transparent; width: 25%;'>28900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-61</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>ovvost</b></td>
+            <td style='background: transparent; width: 25%;'>19900</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-251</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr>
+        <td>40</td>
+        <td>2016-01-05 10:03:45</td>
+        <td><table class='table table-'>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Replay</b></td>
+            <td style='background: transparent; width: 25%;'>47100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+321</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Тян</b></td>
+            <td style='background: transparent; width: 25%;'>39100</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-success'>+141</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Babaika</b></td>
+            <td style='background: transparent; width: 25%;'>18200</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-168</span></td>
+        </tr>
+<tr>
+            <td style='background: transparent; width: 50%;'><span class='icon-user'></span>&nbsp;<b>Silen-san</b></td>
+            <td style='background: transparent; width: 25%;'>15600</td>
+            <td style='background: transparent; width: 25%;'><span class='badge badge-important'>-294</span></td>
+        </tr>
+</table></td>
+        <td>
+            <ul>
+                <li><a href='default.htm' target='_blank'>Посмотреть реплей</a></li>
+                <li>Лучшая рука собрана игроком <b></b> - 0 хан, 0 фу</li>
+                <li>В игре было 0 побед по рон и 0 побед по цумо</li>
+                <li>В игре было 0 ничьих/пересдач</li>
+                
+            </ul>
+        </td>
+    </tr><tr><td colspan=4><div class='pagination'><ul>
+<li><a href='page3.htm'>Назад</a></li>
+<li><a href='page5.htm'>Вперед</a></li>
+</ul></div></td></tr></table></div>
+
+</body>
+</html>

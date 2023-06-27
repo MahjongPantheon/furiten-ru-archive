@@ -1,0 +1,387 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0046)http://turnir2016.furiten.ru/stat/?sort=rating --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="../last/default.htm">Последние игры</a></li>
+                    <li><a href="default.htm">Рейтинг</a></li>
+                    <li><a href="../graphs/default.htm">Графики</a></li>
+                                        <li><a href="../add/default.htm">+Игра&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                                        <li><a href="../reg/default.htm">+Игрок&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../login/default.htm">Вход&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../timer/default.htm" target="_blank">Таймер</a></li>
+                    <li><a href="../sortition/24202913/default.htm" target="_blank">Рассадка&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Рейтинг игроков</h2>
+<br>
+<table class="table table-striped table-condensed">
+    <tr>
+        <th>Игрок</th>
+        <th><a href="sortrating.htm">Рейтинг</a><span class="icon-arrow-down"></span></th>
+        <th><a href="sortavg.htm">Среднее место</a></th>
+        <th><abbr title="Среднеквадратичное отклонение">СКО</abbr></th>
+        <th>Сыграно игр</th>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usernusha.htm">Nusharik</a></td>
+        <td><span class="badge badge-success">1599.8</span></td>
+        <td>1.5</td>
+        <td>0.866</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usersifsi.htm">Сифси</a></td>
+        <td><span class="badge badge-success">1585.4</span></td>
+        <td>1.25</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userrumkin.htm">Rumkin</a></td>
+        <td><span class="badge badge-success">1563.2</span></td>
+        <td>1.75</td>
+        <td>1.299</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usersayaka.htm">Sayaka</a></td>
+        <td><span class="badge badge-success">1560.6</span></td>
+        <td>2</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usertyan.htm">Тян</a></td>
+        <td><span class="badge badge-success">1551.8</span></td>
+        <td>2</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/useroath.htm">Faithful to the Oath</a></td>
+        <td><span class="badge badge-success">1551.3</span></td>
+        <td>2</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usercoms.htm">eComs</a></td>
+        <td><span class="badge badge-success">1547.7</span></td>
+        <td>2</td>
+        <td>0.7071</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userjun.htm">June</a></td>
+        <td><span class="badge badge-success">1547</span></td>
+        <td>2</td>
+        <td>0.7071</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/useryllin.htm">yllin</a></td>
+        <td><span class="badge badge-success">1545.4</span></td>
+        <td>1.75</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userbaron.htm">Барон</a></td>
+        <td><span class="badge badge-success">1540.2</span></td>
+        <td>2</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usermaaonni.htm">maaonni</a></td>
+        <td><span class="badge badge-success">1537.9</span></td>
+        <td>1.75</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userreplay.htm">Replay</a></td>
+        <td><span class="badge badge-success">1533.4</span></td>
+        <td>2.25</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usermadcat.htm">Mad Cat</a></td>
+        <td><span class="badge badge-success">1532.6</span></td>
+        <td>2</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/uservell.htm">WE8</a></td>
+        <td><span class="badge badge-success">1532.2</span></td>
+        <td>2.25</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/useroringer.htm">Oringer</a></td>
+        <td><span class="badge badge-success">1528.9</span></td>
+        <td>2.25</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userrichi.htm">Richi</a></td>
+        <td><span class="badge badge-success">1526.3</span></td>
+        <td>2.25</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userktoto.htm">KTO-TO</a></td>
+        <td><span class="badge badge-success">1516.3</span></td>
+        <td>2</td>
+        <td>0.7071</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usertensai.htm">Tensai</a></td>
+        <td><span class="badge badge-success">1509.3</span></td>
+        <td>2.25</td>
+        <td>1.0897</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userfazig.htm">FaZiG</a></td>
+        <td><span class="badge badge-success">1509</span></td>
+        <td>2.5</td>
+        <td>0.866</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usermusashi.htm">Miyamoto Musashi</a></td>
+        <td><span class="badge badge-success">1505.8</span></td>
+        <td>2.5</td>
+        <td>1.118</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userflashka.htm">flashka</a></td>
+        <td><span class="badge badge-success">1502.3</span></td>
+        <td>2.25</td>
+        <td>1.299</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userbabaika.htm">Babaika</a></td>
+        <td><span class="badge badge-important">1498.9</span></td>
+        <td>2.5</td>
+        <td>1.118</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usermox.htm">Александр С</a></td>
+        <td><span class="badge badge-important">1498</span></td>
+        <td>2.25</td>
+        <td>1.299</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userrqd.htm">RQD</a></td>
+        <td><span class="badge badge-important">1497.7</span></td>
+        <td>2.5</td>
+        <td>1.118</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usermaki.htm">maki</a></td>
+        <td><span class="badge badge-important">1494.9</span></td>
+        <td>2.25</td>
+        <td>1.0897</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/useryami.htm">Yami</a></td>
+        <td><span class="badge badge-important">1492</span></td>
+        <td>2.75</td>
+        <td>1.0897</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usernoob.htm">Нубищееее</a></td>
+        <td><span class="badge badge-important">1491.5</span></td>
+        <td>2.75</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userangry.htm">Angrymodern</a></td>
+        <td><span class="badge badge-important">1484.1</span></td>
+        <td>2.5</td>
+        <td>1.118</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userrabakku.htm">Rabakku</a></td>
+        <td><span class="badge badge-important">1484.1</span></td>
+        <td>2.75</td>
+        <td>1.0897</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usertslaf.htm">TslaF</a></td>
+        <td><span class="badge badge-important">1482.3</span></td>
+        <td>3</td>
+        <td>1.2247</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usersilen.htm">Silen-san</a></td>
+        <td><span class="badge badge-important">1478.9</span></td>
+        <td>2.5</td>
+        <td>1.5</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userfobos.htm">foboskilla</a></td>
+        <td><span class="badge badge-important">1474.9</span></td>
+        <td>2.75</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userolex.htm">olex</a></td>
+        <td><span class="badge badge-important">1470.3</span></td>
+        <td>2.75</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userkuzmich.htm">kuzmich</a></td>
+        <td><span class="badge badge-important">1467.3</span></td>
+        <td>3</td>
+        <td>0.7071</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userushkan.htm">Ushkan</a></td>
+        <td><span class="badge badge-important">1465.2</span></td>
+        <td>3</td>
+        <td>0.7071</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usersladki.htm">Сладкий</a></td>
+        <td><span class="badge badge-important">1462.6</span></td>
+        <td>3</td>
+        <td>1</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userrh.htm">RH</a></td>
+        <td><span class="badge badge-important">1448.5</span></td>
+        <td>3.25</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userkuzma.htm">Кузьма</a></td>
+        <td><span class="badge badge-important">1434.4</span></td>
+        <td>3.25</td>
+        <td>1.299</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/usernight.htm">nwalker</a></td>
+        <td><span class="badge badge-important">1427.6</span></td>
+        <td>3.5</td>
+        <td>0.5</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userovvost.htm">ovvost</a></td>
+        <td><span class="badge badge-important">1426.1</span></td>
+        <td>3.75</td>
+        <td>0.433</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userkvega.htm">Kvega</a></td>
+        <td><span class="badge badge-important">1424.1</span></td>
+        <td>3.25</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userminori.htm">Minori</a></td>
+        <td><span class="badge badge-important">1420.2</span></td>
+        <td>3.5</td>
+        <td>0.5</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userorych.htm">Лорд Тентаклис</a></td>
+        <td><span class="badge badge-important">1413.9</span></td>
+        <td>3.25</td>
+        <td>0.8292</td>
+        <td>4</td>
+    </tr>
+        <tr>
+        <td><a href="../graphs/userbenya.htm">Benya</a></td>
+        <td><span class="badge badge-important">1413.1</span></td>
+        <td>3.5</td>
+        <td>0.5</td>
+        <td>4</td>
+    </tr>
+    </table>
+</div>
+
+</body>
+</html>

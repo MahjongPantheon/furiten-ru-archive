@@ -1,0 +1,263 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0050)http://turnir2015.furiten.ru/sortition/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Riichi statboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Oleg Klimenko @ Novosibirsk Mahjong Club">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.categoryaxisrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.barrenderer.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.highlighter.js"></script>
+    <script type="text/javascript" src="../assets/js/jqplot.cursor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.jqplot.min.css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="../last/default.htm">Последние игры</a></li>
+                    <li><a href="../stat/default.htm">Рейтинг игроков</a></li>
+                    <li><a href="../graphs/default.htm">Графики рейтинга</a></li>
+                    <li><a href="../logs/default.htm">Логи</a></li>
+                    <li><a href="../add/default.htm">Добавить игру&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../reg/default.htm">Добавить игрока&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../login/default.htm">Вход&nbsp;&nbsp;<span style="opacity: 0.5" class="icon-lock icon-white"></span></a></li>
+                    <li><a href="../timer/default.htm" target="_blank">Таймер</a></li>
+                    <li><a href="default.htm" target="_blank">Рассадка</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Жеребьёвка</h2>
+<br>
+<table class="table table-striped">
+    <tr>
+        <th># стола</th>
+        <th>ВОСТОК</th>
+        <th></th>
+        <th>ЮГ</th>
+        <th></th>
+        <th>ЗАПАД</th>
+        <th></th>
+        <th>СЕВЕР</th>
+        <th></th>
+    </tr>
+            <tr><td>Стол № 1</td>        <td>
+            Oringer        </td>
+        <td>
+            <span class="badge badge-success">1543.4</span>
+        </td>
+                            <td>
+            Сережа        </td>
+        <td>
+            <span class="badge badge-success">1508.4</span>
+        </td>
+                            <td>
+            Selva        </td>
+        <td>
+            <span class="badge badge-success">1532</span>
+        </td>
+                            <td>
+            Сладкий        </td>
+        <td>
+            <span class="badge badge-success">1558.9</span>
+        </td>
+        </tr>            <tr><td>Стол № 2</td>        <td>
+            Такара        </td>
+        <td>
+            <span class="badge badge-success">1532.8</span>
+        </td>
+                            <td>
+            TslaF        </td>
+        <td>
+            <span class="badge badge-success">1544.4</span>
+        </td>
+                            <td>
+            Harmony        </td>
+        <td>
+            <span class="badge badge-success">1556.4</span>
+        </td>
+                            <td>
+            Тян        </td>
+        <td>
+            <span class="badge badge-success">1525.7</span>
+        </td>
+        </tr>            <tr><td>Стол № 3</td>        <td>
+            Барон        </td>
+        <td>
+            <span class="badge badge-success">1538.2</span>
+        </td>
+                            <td>
+            Jun        </td>
+        <td>
+            <span class="badge badge-success">1570.5</span>
+        </td>
+                            <td>
+            Валерия        </td>
+        <td>
+            <span class="badge badge-success">1503.5</span>
+        </td>
+                            <td>
+            maki        </td>
+        <td>
+            <span class="badge badge-success">1522.9</span>
+        </td>
+        </tr>            <tr><td>Стол № 4</td>        <td>
+            HadoKEN        </td>
+        <td>
+            <span class="badge badge-success">1520.2</span>
+        </td>
+                            <td>
+            Yagef        </td>
+        <td>
+            <span class="badge badge-success">1501.1</span>
+        </td>
+                            <td>
+            Сифси        </td>
+        <td>
+            <span class="badge badge-success">1507</span>
+        </td>
+                            <td>
+            kuzmich        </td>
+        <td>
+            <span class="badge badge-success">1579.9</span>
+        </td>
+        </tr>            <tr><td>Стол № 5</td>        <td>
+            Samal        </td>
+        <td>
+            <span class="badge badge-success">1501.6</span>
+        </td>
+                            <td>
+            Flashka        </td>
+        <td>
+            <span class="badge badge-success">1548.5</span>
+        </td>
+                            <td>
+            Тако-кун        </td>
+        <td>
+            <span class="badge badge-important">1462.2</span>
+        </td>
+                            <td>
+            Пай        </td>
+        <td>
+            <span class="badge badge-important">1482</span>
+        </td>
+        </tr>            <tr><td>Стол № 6</td>        <td>
+            Ushkan        </td>
+        <td>
+            <span class="badge badge-important">1399.4</span>
+        </td>
+                            <td>
+            Тенсай        </td>
+        <td>
+            <span class="badge badge-important">1475.5</span>
+        </td>
+                            <td>
+            Airee        </td>
+        <td>
+            <span class="badge badge-important">1489</span>
+        </td>
+                            <td>
+            Daler        </td>
+        <td>
+            <span class="badge badge-important">1428.1</span>
+        </td>
+        </tr>            <tr><td>Стол № 7</td>        <td>
+            JoJo        </td>
+        <td>
+            <span class="badge badge-important">1481.4</span>
+        </td>
+                            <td>
+            Shandow        </td>
+        <td>
+            <span class="badge badge-important">1480.9</span>
+        </td>
+                            <td>
+            Benya        </td>
+        <td>
+            <span class="badge badge-important">1491</span>
+        </td>
+                            <td>
+            НоСоЯк        </td>
+        <td>
+            <span class="badge badge-important">1487.8</span>
+        </td>
+        </tr>            <tr><td>Стол № 8</td>        <td>
+            eComs        </td>
+        <td>
+            <span class="badge badge-important">1466.9</span>
+        </td>
+                            <td>
+            ЕЩЕ СЛАЩЕ!        </td>
+        <td>
+            <span class="badge badge-important">1472</span>
+        </td>
+                            <td>
+            Nusharik        </td>
+        <td>
+            <span class="badge badge-important">1472.1</span>
+        </td>
+                            <td>
+            Richi        </td>
+        <td>
+            <span class="badge badge-important">1465.8</span>
+        </td>
+        </tr>            <tr><td>Стол № 9</td>        <td>
+            Сладкоежка        </td>
+        <td>
+            <span class="badge badge-important">1460.9</span>
+        </td>
+                            <td>
+            Кузьма        </td>
+        <td>
+            <span class="badge badge-important">1388</span>
+        </td>
+                            <td>
+            Psyhister        </td>
+        <td>
+            <span class="badge badge-important">1466.5</span>
+        </td>
+                            <td>
+            Хиф        </td>
+        <td>
+            <span class="badge badge-important">1474.2</span>
+        </td>
+        </tr>    </table></div>
+
+</body>
+</html>

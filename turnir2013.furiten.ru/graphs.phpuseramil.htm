@@ -1,0 +1,120 @@
+<h2>Графики рейтинга</h2>
+<br>
+<form action="" method="get" class="well form-search">
+    <input placeholder="Игрок" type="text" name="user" value='amil'>
+    <input type="submit" value="Посмотреть" class="btn">
+</form>
+<div id='chart_rating'></div>
+<style type="text/css">
+    .own {
+        background-color: #ffff00 !important;
+    }
+    .jqplot-highlighter-tooltip {
+        border: 1px solid #555;
+        -webkit-box-shadow: 4px 4px 24px 1px rgba(0, 0, 0, 0.7);
+        box-shadow: 4px 4px 24px 1px rgba(0, 0, 0, 0.7);
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        ////// rating plot
+        var points = [[0,1500],[1,1465],[2,1444],[3,1423],[4,1398],[5,1383],[6,1376]];
+        var games = [[{"id":5,"game_id":2,"username":"kuzmich","score":53100,"result_score":381,"place":1},{"id":6,"game_id":2,"username":"Silen-san","score":28600,"result_score":36,"place":2},{"id":7,"game_id":2,"username":"Kiossarin","score":27700,"result_score":-73,"place":3},{"id":8,"game_id":2,"username":"Amil","score":10600,"result_score":-344,"place":4}],[{"id":57,"game_id":15,"username":"Сифси","score":32700,"result_score":177,"place":1},{"id":58,"game_id":15,"username":"Влад","score":32000,"result_score":70,"place":2},{"id":59,"game_id":15,"username":"Harmony","score":31900,"result_score":-31,"place":3},{"id":60,"game_id":15,"username":"Amil","score":23400,"result_score":-216,"place":4}],[{"id":73,"game_id":19,"username":"Nagi Souichirou","score":38100,"result_score":231,"place":1},{"id":74,"game_id":19,"username":"Сифси","score":30000,"result_score":50,"place":2},{"id":75,"game_id":19,"username":"Маки","score":27100,"result_score":-79,"place":3},{"id":76,"game_id":19,"username":"Amil","score":24800,"result_score":-202,"place":4}],[{"id":125,"game_id":32,"username":"Лёха","score":38300,"result_score":233,"place":1},{"id":126,"game_id":32,"username":"Лера","score":32200,"result_score":72,"place":2},{"id":127,"game_id":32,"username":"ZOKer","score":31000,"result_score":-40,"place":3},{"id":128,"game_id":32,"username":"Amil","score":19500,"result_score":-255,"place":4}],[{"id":133,"game_id":34,"username":"Kenny","score":67100,"result_score":521,"place":1},{"id":134,"game_id":34,"username":"Harmony","score":20900,"result_score":-41,"place":2},{"id":135,"game_id":34,"username":"Amil","score":19900,"result_score":-151,"place":3},{"id":136,"game_id":34,"username":"Mithagar","score":12100,"result_score":-329,"place":4}],[{"id":189,"game_id":48,"username":"Sus-lik","score":52600,"result_score":376,"place":1},{"id":190,"game_id":48,"username":"Хиф","score":29000,"result_score":40,"place":2},{"id":191,"game_id":48,"username":"Amil","score":28500,"result_score":-65,"place":3},{"id":192,"game_id":48,"username":"Такара","score":8900,"result_score":-361,"place":4}]];
+        var user = 'Amil';
+        var plot_rating = $.jqplot('chart_rating', [points], {
+            axes:{
+                xaxis:{
+                    //label:'Сыграно игр',
+                    ticks: [0,1,2,3,4,5,6]                },
+                yaxis:{
+                    label:'Рейтинг'
+                }
+            },
+            highlighter: {
+                show: true,
+                sizeAdjust: 7,
+                tooltipContentEditor: function(str, seriesIndex, pointIndex) {
+                    var g = games[pointIndex-1];
+                    var players = [];
+                    var outcome = '';
+                    players.push('<table style="background-color:#fff; padding-bottom: 0; margin-bottom: 0" class="table table-condensed table-bordered">');
+                    for (var i = 0; i < 4; i++) {
+                        if (g[i].result_score < 0) {
+                            outcome = 'important';
+                        } else {
+                            outcome = 'success';
+                        }
+                        if (g[i].username == user) {
+                            own = 'own';
+                        } else {
+                            own = '';
+                        }
+                        players.push(
+                            '<tr class=" ' + own + '">' +
+                            '<td><b>' + g[i].username + '</b>: ' +
+                            '</td><td>' +
+                            '<span class="badge badge-' + outcome + '">' + g[i].result_score + '</span>' +
+                            '</td></tr>');
+                    }
+                    players.push('</table>');
+                    return players.join('');
+                }
+            },
+            cursor: {
+                show: false
+            },
+            seriesDefaults:{
+                rendererOptions: {
+                    smooth: true
+                }
+            }
+        });
+
+        ////// hands plot
+
+        $(document).ready(function(){
+            var han_data = [
+                ['1', 0], 
+['2', 0], 
+['3', 0], 
+['4', 0], 
+['5', 0], 
+['6', 0], 
+['7', 0], 
+['8', 0], 
+['9', 0], 
+['10', 0], 
+['11', 0], 
+['12', 0], 
+['13+', 0]            ];
+
+            var plot_hands = $.jqplot('chart_hands', [han_data], {
+                title: 'Ценность собранных рук',
+                series:[{renderer:$.jqplot.BarRenderer}],
+                axesDefaults: {
+                    tickOptions: {
+                        fontSize: '10pt'
+                    }
+                },
+                axes: {
+                    xaxis: {
+                        label: 'Хан',
+                        renderer: $.jqplot.CategoryAxisRenderer
+                    }
+                }
+            });
+        });
+
+    });
+</script>
+<hr>
+
+<div class="row">
+    <div class="span4">
+        <table class="table table-striped table-condensed">
+            <tr><td colspan="2" style="padding-left: 20px"><b>Общая статистика:</b></td></tr>
+            <tr><td>Сыграно игр</td><td>6</td></tr>
+            <tr><td>Выиграно раздач</td><td>0</td></tr>
+            <tr><td>Интегральный рейтинг</td><td>-429.55</td></tr>
+            <tr><td colspan="2" style="padding-left: 20px"><b>По исходам раздач:</b></td></tr>
+            <tr><td>Выигрышей по рон</td><td><b>0</b> &nbsp; (
